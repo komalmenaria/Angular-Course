@@ -1,0 +1,26 @@
+<p> hello    {{name}}   <-- this is interpolation </p>  
+<!-- <h3 [ngClass]="messageClasses" >  {{2+2}} </h3>  not working -->
+<h2 [class]="successClass"  > {{"welcome " + name }} </h2>
+<h2 class="text-success" [class]="dangerClass" > {{name.length}} </h2>
+
+<h2> {{name.toUpperCase()}} </h2>
+
+<i [class.text-danger]="hasError"   >{{greetUser()}} </i>
+
+<b>  <i> {{"siteurl is " + siteUrl}} </i> </b>
+<input value="komal" [id]="myid" />
+ <input disabled="false" value="kittu" id={{myid}} />   <!-- this will not make disable because its accept boolean -->
+<input [disabled]="isDisabled" value="vishal" id={{myid}} /> <!-- this will work and add property disable  -->
+<input [style.color]="'orange'" bind-disabled="isDisabled" value="vishal" id={{myid}} />
+
+<h1 [style.color]="hasError ? 'red' : 'green' " > Style Binding</h1>
+<h1 [style.color]="highlightColor" > Style Binding 2 </h1>
+<p [style]="mystyle" >  Style Bind 3 </p>
+<button (click)="onClick($event)" > Greet Me </button>
+<button (click)="greeting= 'komal welcome' " >  Greeting </button>
+
+{{greeting}}
+
+<p> ----------------------------------</p>
+<input  (input)="changeName($event)" />
+{{myname}}

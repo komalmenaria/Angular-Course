@@ -1,0 +1,12 @@
+nvm installation steps
+
+1. Go to URL --> https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+2. Go to this url --> https://github.com/coreybutler/nvm-windows/releases
+3. Download --> nvm-setup.exe
+4. Complete the Installation Wizard
+Open the file that you have downloaded, and complete the installation wizard.
+
+When done, you can confirm that nvm has been installed by running:
+
+nvm -v
+If nvm was installed correctly, this command will show you the nvm version installed.

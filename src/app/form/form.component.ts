@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
-export class FormComponent {
+export class FormComponent implements OnInit {
 
-  public name = ""
+  displayName = false;
+  public name = "";
+  // color = "green";
+  public colors = ["green" , "blue","black","green"]
   handleInputChange(event : Event){
 
   }
@@ -18,4 +22,7 @@ export class FormComponent {
 console.log( "Welcome " + value.value)
   }
 
+  ngOnInit() {
+      
+  }
 }

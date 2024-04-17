@@ -1,3 +1,46 @@
-<p>Template Reference !</p>
+<!-- <p>Template Reference !</p>
 <input type="text"  #myName  placeholder="Enter Name"  (input)="handleInputChange($event)"  />
 <button  (click)="logMessage(myName)" >Log</button>
+
+
+<h1>My Form</h1>
+
+<br />
+<h1> ngIf model </h1>
+<input type="password" placeholder="Enter Password" *ngIf="displayName; else elseBlock" />
+
+{{name}}
+
+<ng-template #elseBlock>
+
+    <h2> Name is hidden</h2>
+</ng-template> 
+
+
+
+<div *ngIf="displayName; then myifconditionBlock; else myelseconditionBlock" >
+
+</div>
+
+<ng-template #myifconditionBlock>
+<h2>Komal</h2>
+</ng-template>
+<ng-template #myelseconditionBlock>
+<h2>Hidden</h2>
+</ng-template>
+-->
+<!-- <h1> ngSwitch model </h1>
+<div [ngSwitch]="color" >
+    <div *ngSwitchCase="'red'">You selected red</div>
+    <div *ngSwitchCase="'blue'">You selected blue</div>
+    <div *ngSwitchCase="'green'">You selected green</div>
+    <div *ngSwitchDefault>Pick Again</div>
+
+</div> -->
+
+<h1> ngFor model </h1>
+<div *ngFor="let color of colors; index as i; first as f; last as l; odd as o; even as e" >
+    <h2> {{f}}  {{l}} {{i}} {{color}}  {{o}} {{e}} </h2>
+
+</div>
+

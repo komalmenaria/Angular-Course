@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './form.component.css'
 })
 export class FormComponent implements OnInit {
+  // @Input() parentData: any;
+  @Input('parentData' ) namefromparent : any;
+  @Output() public childEvent =  new EventEmitter();
+  
 
+  fireEvent(){
+    this.childEvent.emit('HEY code evaluation.')
+  }
   displayName = false;
   public name = "";
   // color = "green";

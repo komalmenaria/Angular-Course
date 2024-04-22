@@ -41,6 +41,9 @@
 <h1> ngFor model </h1>
 <div *ngFor="let color of colors; index as i; first as f; last as l; odd as o; even as e" >
     <h2> {{f}}  {{l}} {{i}} {{color}}  {{o}} {{e}} </h2>
+<!-- {{parentData}} -->
+{{ "hello " +  namefromparent }}
 
 </div>
+<button (click)="fireEvent()" > Call Parent </button>
 
